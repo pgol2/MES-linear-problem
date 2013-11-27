@@ -41,4 +41,5 @@ void Item::create_H_P(double S, double k, double q, double alfa, double tOut) {
 	//brzegowe
 	tab_local_p[0] = (First->getBc() == 1) ? -q * S : 0;												//TO DO - tuaj wprowadzanie tych warunkow zrobic tak zeby bylo to niezalezne od kolejnosci
 	tab_local_p[1] = (Second->getBc() == 2) ? alfa * S * tOut : 0;
+	//tutaj zmienic 
 }

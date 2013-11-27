@@ -2,6 +2,7 @@
 #include "Grid.h"
 using namespace std;
 
+
 int main() 
 {
 	int n=3;			//ilosc wezlow																//TO DO tutaj zrobic funkcje podawania wartosci i wpisywania rowaniez z pliku !

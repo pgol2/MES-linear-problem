@@ -21,6 +21,7 @@ Grid::Grid(int n_preta, double k_preta, double L_preta, double S_preta, double a
 		tab_T[i] = 0;
 	}
 
+
 	//stworzenie globalnej tablicy H i wyzerowanie 
 	tab_H= new double* [n];
 	for(int i=0; i<n; i++)
