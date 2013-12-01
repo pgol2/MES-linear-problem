@@ -38,8 +38,24 @@ void Item::create_H_P(double S, double k, double q, double alfa, double tOut) {
 	tab_local_h[1][0] = -C;
 	tab_local_h[1][1] = C;
 
-	//brzegowe
-	tab_local_p[0] = (First->getBc() == 1) ? -q * S : 0;												//TO DO - tuaj wprowadzanie tych warunkow zrobic tak zeby bylo to niezalezne od kolejnosci
-	tab_local_p[1] = (Second->getBc() == 2) ? alfa * S * tOut : 0;
-	//tutaj zmienic 
+	////brzegowe
+	//tab_local_p[0] = (First->getBc() == 1) ? -q * S : 0;												//TO DO - tuaj wprowadzanie tych warunkow zrobic tak zeby bylo to niezalezne od kolejnosci
+	//tab_local_p[1] = (Second->getBc() == 2) ? alfa * S * tOut : 0;
+	// 
+
+	//brzegowe poprawione
+	if(First->getBc() == 1)
+		tab_local_p[0] = -q * S;
+	else if(First->getBc() == 2)
+		tab_local_p[0] = alfa * S * tOut;
+	else
+		tab_local_p[0] = 0;
+
+	if(Second->getBc() == 1)
+		tab_local_p[1] = -q * S;
+	else if(Second->getBc() == 2)
+		tab_local_p[1] = alfa * S * tOut;
+	else
+		tab_local_p[1] = 0;
+
 }
