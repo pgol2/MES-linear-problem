@@ -93,12 +93,7 @@ void Grid::print_P() {
 	cout << endl;
 }
 
-// Rozk³ad LU - macierz odwrotna
-// Data: 20.10.2010
-// (C)2012 mgr Jerzy Wa³aszek
-//-----------------------------
-// Funkcja dokonuje rozk³adu LU macierzy A
-//----------------------------------------
+
 bool Grid::ludist(int n, double ** A) {
 	const double eps = 1e-12;
 	int i,j,k;
@@ -115,12 +110,6 @@ bool Grid::ludist(int n, double ** A) {
 	}
 	return true;
 }
-// Rozk³ad LU - macierz odwrotna
-// Data: 20.10.2010
-// (C)2012 mgr Jerzy Wa³aszek
-//-----------------------------
-// Funkcja wyznacza wektor X na podstawie A i X[i]
-//------------------------------------------------
 bool Grid::lusolve(int k, int n, double ** A, double ** X)
 {
 	int    i,j;
